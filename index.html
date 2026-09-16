@@ -12,16 +12,22 @@
 
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="Ángel Marrufo">
+  <meta name="apple-mobile-web-app-title" content="Audio Solutions">
 
-  <!-- PWA -->
-  <link rel="manifest" href="./manifest.json">
+  <!-- HOME SCREEN ICON -->
+  <link
+    rel="apple-touch-icon"
+    href="angelmarrufoicon.png"
+  >
 
-  <!-- ICONS -->
-  <link rel="apple-touch-icon" href="./angelmarrufoicon.png">
-  <link rel="icon" type="image/png" href="./angelmarrufoicon.png">
+  <link
+    rel="icon"
+    type="image/png"
+    href="angelmarrufoicon.png"
+  >
 
   <title>Ángel Marrufo | Audio Solutions</title>
+
 
   <style>
 
@@ -33,59 +39,82 @@
     body {
       margin: 0;
       min-height: 100%;
+
       background: #06111f;
-      font-family: Arial, Helvetica, sans-serif;
+
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
     }
 
     body {
       display: flex;
+
       justify-content: center;
       align-items: flex-start;
     }
 
+
     /* =========================
-       MAIN PAGE
+       PAGE
     ========================== */
 
     .page {
-      position: relative;
       width: 100%;
       max-width: 864px;
-      overflow: hidden;
+
       background: #06111f;
+
+      overflow: hidden;
     }
+
 
     /* =========================
-       CARD
+       BUSINESS CARD IMAGE
     ========================== */
 
-    .card-area {
+    .card {
       position: relative;
+
       width: 100%;
     }
 
-    .card-area > img {
+    .card-image {
       display: block;
+
       width: 100%;
       height: auto;
+
       user-select: none;
+
       -webkit-user-drag: none;
     }
 
+
     /* =========================
-       INVISIBLE BUTTONS
+       ORIGINAL IMAGE BUTTONS
     ========================== */
 
     .hotspot {
       position: absolute;
+
       left: 5.5%;
+
       width: 89%;
-      z-index: 10;
+
+      z-index: 20;
+
       border-radius: 36px;
-      text-decoration: none;
+
       cursor: pointer;
-      -webkit-tap-highlight-color: transparent;
+
+      text-decoration: none;
+
+      -webkit-tap-highlight-color:
+        transparent;
     }
+
 
     /* SAVE MY CONTACT */
 
@@ -94,12 +123,14 @@
       height: 8.4%;
     }
 
+
     /* CALL ME */
 
     .call {
       top: 49.5%;
       height: 8.4%;
     }
+
 
     /* EMAIL ME */
 
@@ -108,12 +139,14 @@
       height: 8.4%;
     }
 
+
     /* TEXT ME */
 
     .text {
       top: 68.1%;
       height: 8.4%;
     }
+
 
     /* SHARE MY CONTACT */
 
@@ -122,242 +155,369 @@
       height: 8.4%;
     }
 
-    .hotspot:focus-visible {
-      outline: 3px solid #36aaff;
-      outline-offset: -3px;
-      background: rgba(0, 145, 255, 0.10);
-    }
 
     /* =========================
-       HOME SCREEN SECTION
+       NEW BUTTON AREA
     ========================== */
 
-    .home-section {
+    .actions {
+
       padding:
+
         22px
         5.5%
-        calc(38px + env(safe-area-inset-bottom));
+        calc(
+          40px +
+          env(safe-area-inset-bottom)
+        );
 
       background:
+
         radial-gradient(
           circle at 50% 0%,
-          rgba(0, 145, 255, 0.16),
-          transparent 60%
+          rgba(0, 149, 255, 0.18),
+          transparent 55%
         ),
+
         #06111f;
     }
 
+
     /* =========================
-       ADD TO HOME SCREEN BUTTON
+       REAL BUTTON
     ========================== */
 
-    .home-button {
-      width: 100%;
-      min-height: 88px;
+    .action-button {
 
-      border-radius: 28px;
-      border: 3px solid #20c9ff;
+      appearance: none;
+      -webkit-appearance: none;
+
+      width: 100%;
+
+      min-height: 82px;
+
+      margin: 0 0 18px 0;
+
+      padding: 10px 22px;
+
+      border:
+
+        2px solid
+        #22c7ff;
+
+      border-radius: 25px;
 
       background:
+
         linear-gradient(
           135deg,
-          rgba(0, 38, 76, 0.98),
-          rgba(5, 32, 80, 0.98)
+          #06294c,
+          #071b3b
         );
 
       box-shadow:
-        0 0 20px rgba(0, 183, 255, 0.30),
-        inset 0 0 20px rgba(0, 115, 255, 0.12);
+
+        0 0 18px
+        rgba(0, 180, 255, 0.28),
+
+        inset 0 0 18px
+        rgba(0, 130, 255, 0.12);
 
       display: flex;
-      align-items: center;
 
-      padding: 10px 26px;
+      align-items: center;
 
       color: white;
 
+      font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
       cursor: pointer;
-
-      -webkit-tap-highlight-color: transparent;
-
-      transition:
-        transform 0.15s ease,
-        box-shadow 0.15s ease;
-    }
-
-    .home-button:hover {
-      box-shadow:
-        0 0 30px rgba(0, 183, 255, 0.40),
-        inset 0 0 20px rgba(0, 115, 255, 0.15);
-    }
-
-    .home-button:active {
-      transform: scale(0.98);
-    }
-
-    /* LOGO */
-
-    .home-logo {
-      width: 60px;
-      height: 60px;
-
-      object-fit: contain;
-
-      margin-right: 20px;
-
-      border-radius: 14px;
-    }
-
-    .home-text {
-      flex: 1;
 
       text-align: left;
 
-      font-size: 26px;
+      -webkit-tap-highlight-color:
+        transparent;
+    }
+
+
+    .action-button:active {
+
+      transform:
+        scale(0.98);
+
+    }
+
+
+    /* =========================
+       BUTTON ICON AREA
+    ========================== */
+
+    .button-icon {
+
+      width: 56px;
+      height: 56px;
+
+      min-width: 56px;
+
+      margin-right: 18px;
+
+      display: flex;
+
+      align-items: center;
+      justify-content: center;
+
+    }
+
+
+    /* SHARE ICON */
+
+    .share-icon {
+
+      font-size: 42px;
+
+      color: #d9f5ff;
+
+      line-height: 1;
+
+    }
+
+
+    /* AUDIO SOLUTIONS LOGO */
+
+    .button-logo {
+
+      width: 56px;
+      height: 56px;
+
+      object-fit: contain;
+
+      border-radius: 12px;
+
+    }
+
+
+    /* =========================
+       BUTTON TEXT
+    ========================== */
+
+    .button-text {
+
+      flex: 1;
+
+      font-size: 25px;
+
       font-weight: 600;
+
+      color: white;
+
     }
 
-    .home-arrow {
-      margin-left: 15px;
 
-      color: #d9f4ff;
+    /* ARROW */
 
-      font-size: 46px;
+    .button-arrow {
+
+      margin-left: 12px;
+
+      color: #d9f5ff;
+
+      font-size: 42px;
+
       font-weight: 300;
+
     }
+
 
     /* =========================
        STAY CONNECTED
     ========================== */
 
     .stay-connected {
+
+      margin-top: 26px;
+
       display: flex;
-      align-items: center;
+
       justify-content: center;
+      align-items: center;
 
-      gap: 16px;
+      gap: 14px;
 
-      margin-top: 28px;
+      color: #8da8bd;
 
-      color: #9eb7cc;
+      font-size: 13px;
 
-      font-size: 15px;
+      letter-spacing: 5px;
 
-      letter-spacing: 6px;
     }
+
 
     .stay-connected::before,
     .stay-connected::after {
+
       content: "";
 
-      width: 75px;
+      width: 65px;
+
       height: 1px;
 
-      background: #6e879b;
+      background: #60798d;
+
     }
+
 
     /* =========================
        POPUP
     ========================== */
 
     .modal {
+
       display: none;
 
       position: fixed;
+
       inset: 0;
 
-      z-index: 1000;
+      z-index: 9999;
 
       padding: 20px;
 
-      background: rgba(0, 0, 0, 0.84);
+      background:
+        rgba(0, 0, 0, 0.85);
 
       align-items: center;
+
       justify-content: center;
+
     }
 
-    .modal.show {
+
+    .modal.active {
+
       display: flex;
+
     }
 
-    .modal-box {
+
+    .modal-content {
+
       width: 100%;
-      max-width: 500px;
 
-      padding: 32px 26px;
+      max-width: 480px;
 
-      border: 2px solid #20c9ff;
-      border-radius: 28px;
+      padding: 30px 24px;
+
+      border:
+
+        2px solid
+        #22c7ff;
+
+      border-radius: 26px;
 
       background:
+
         linear-gradient(
           145deg,
-          #071a2d,
+          #071c31,
           #06111f
         );
 
       box-shadow:
-        0 0 40px rgba(0, 183, 255, 0.35);
+
+        0 0 35px
+        rgba(0, 183, 255, 0.35);
 
       color: white;
 
       text-align: center;
+
     }
 
-    .popup-logo {
-      width: 92px;
-      height: 92px;
+
+    .modal-logo {
+
+      width: 90px;
+
+      height: 90px;
 
       object-fit: contain;
 
+      border-radius: 18px;
+
       margin-bottom: 12px;
 
-      border-radius: 18px;
     }
 
-    .modal-box h2 {
-      margin: 5px 0 20px;
+
+    .modal-content h2 {
+
+      margin:
+
+        5px
+        0
+        20px;
 
       font-size: 27px;
+
     }
 
-    .modal-box p {
-      margin: 12px 0;
+
+    .modal-content p {
+
+      margin:
+
+        12px
+        0;
+
+      font-size: 18px;
+
+      line-height: 1.5;
 
       color: #c8d8e7;
 
-      font-size: 18px;
-      line-height: 1.5;
     }
 
-    .modal-box strong {
+
+    .modal-content strong {
+
       color: white;
+
     }
 
-    .close-button {
+
+    .modal-close {
+
       width: 100%;
 
-      margin-top: 24px;
+      margin-top: 22px;
 
       padding: 16px;
 
       border: none;
-      border-radius: 18px;
+
+      border-radius: 17px;
 
       background:
+
         linear-gradient(
           90deg,
-          #009dff,
-          #0066ff
+          #00a6ff,
+          #006aff
         );
 
       color: white;
 
       font-size: 18px;
+
       font-weight: bold;
 
       cursor: pointer;
+
     }
+
 
     /* =========================
        MOBILE
@@ -365,48 +525,88 @@
 
     @media (max-width: 600px) {
 
-      .home-section {
+      .actions {
+
         padding-top: 18px;
+
       }
 
-      .home-button {
-        min-height: 72px;
 
-        padding: 8px 18px;
+      .action-button {
 
-        border-width: 2px;
-        border-radius: 22px;
+        min-height: 70px;
+
+        padding:
+
+          8px
+          17px;
+
+        border-radius: 21px;
+
       }
 
-      .home-logo {
-        width: 48px;
-        height: 48px;
 
-        margin-right: 15px;
+      .button-icon {
+
+        width: 46px;
+        height: 46px;
+
+        min-width: 46px;
+
+        margin-right: 14px;
+
       }
 
-      .home-text {
-        font-size: 19px;
+
+      .button-logo {
+
+        width: 46px;
+        height: 46px;
+
       }
 
-      .home-arrow {
+
+      .share-icon {
+
         font-size: 34px;
+
       }
+
+
+      .button-text {
+
+        font-size: 19px;
+
+      }
+
+
+      .button-arrow {
+
+        font-size: 34px;
+
+      }
+
 
       .stay-connected {
-        gap: 9px;
 
-        font-size: 11px;
+        gap: 8px;
+
+        font-size: 10px;
 
         letter-spacing: 4px;
+
       }
+
 
       .stay-connected::before,
       .stay-connected::after {
-        width: 40px;
+
+        width: 35px;
+
       }
 
     }
+
 
     /* =========================
        DESKTOP
@@ -415,49 +615,62 @@
     @media (min-width: 900px) {
 
       body {
-        padding: 24px 0;
+
+        padding:
+          24px 0;
+
       }
 
+
       .page {
-        border-radius: 28px;
+
+        border-radius:
+          28px;
 
         box-shadow:
+
           0 20px 70px
           rgba(0, 0, 0, 0.55);
+
       }
 
     }
 
   </style>
+
 </head>
 
 
 <body>
 
+
   <main class="page">
 
+
     <!-- =========================
-         BUSINESS CARD
+         ORIGINAL CARD
     ========================== -->
 
-    <div class="card-area">
+    <div class="card">
+
 
       <img
-        src="./angel-nfc.png"
-        alt="Ángel Marrufo digital NFC business card"
+        class="card-image"
+        src="angel-nfc.png"
+        alt="Ángel Marrufo Audio Solutions Business Card"
       >
 
 
-      <!-- SAVE MY CONTACT -->
+      <!-- SAVE CONTACT -->
 
       <a
         class="hotspot save"
-        href="./angel-marrufo.vcf"
+        href="angel-marrufo.vcf"
         aria-label="Save My Contact"
       ></a>
 
 
-      <!-- CALL ME -->
+      <!-- CALL -->
 
       <a
         class="hotspot call"
@@ -466,7 +679,7 @@
       ></a>
 
 
-      <!-- EMAIL ME -->
+      <!-- EMAIL -->
 
       <a
         class="hotspot email"
@@ -475,7 +688,7 @@
       ></a>
 
 
-      <!-- TEXT ME -->
+      <!-- TEXT -->
 
       <a
         class="hotspot text"
@@ -484,84 +697,146 @@
       ></a>
 
 
-      <!-- SHARE MY CONTACT -->
+      <!-- ORIGINAL SHARE BUTTON -->
 
       <a
         class="hotspot share"
         href="#"
-        role="button"
         aria-label="Share My Contact"
-        onclick="shareBusinessCard(event)"
+        onclick="shareCard(event)"
       ></a>
+
 
     </div>
 
 
+
     <!-- =========================
-         ADD TO HOME SCREEN
+         NEW REAL BUTTONS
     ========================== -->
 
-    <section class="home-section">
+    <section class="actions">
+
+
+      <!-- SHARE BUSINESS CARD -->
 
       <button
-        class="home-button"
+        class="action-button"
         type="button"
-        onclick="addToHomeScreen()"
+        id="shareButton"
       >
 
-        <img
-          src="./angelmarrufoicon.png"
-          class="home-logo"
-          alt="Audio Solutions Logo"
-        >
 
-        <span class="home-text">
-          Add to Home Screen
+        <span class="button-icon">
+
+          <span class="share-icon">
+            ↥
+          </span>
+
         </span>
 
-        <span class="home-arrow">
+
+        <span class="button-text">
+
+          Share Business Card
+
+        </span>
+
+
+        <span class="button-arrow">
+
           ›
+
         </span>
+
 
       </button>
 
 
+
+      <!-- ADD TO HOME SCREEN -->
+
+      <button
+        class="action-button"
+        type="button"
+        id="installButton"
+      >
+
+
+        <span class="button-icon">
+
+          <img
+            class="button-logo"
+            src="angelmarrufoicon.png"
+            alt="Audio Solutions"
+          >
+
+        </span>
+
+
+        <span class="button-text">
+
+          Add to Home Screen
+
+        </span>
+
+
+        <span class="button-arrow">
+
+          ›
+
+        </span>
+
+
+      </button>
+
+
+
       <div class="stay-connected">
+
         STAY CONNECTED
+
       </div>
 
+
     </section>
+
 
   </main>
 
 
+
   <!-- =========================
-       INSTALL INSTRUCTIONS
+       HOME SCREEN POPUP
   ========================== -->
 
   <div
     class="modal"
-    id="homeScreenModal"
-    onclick="closeModalOutside(event)"
+    id="installModal"
   >
 
-    <div class="modal-box">
+
+    <div class="modal-content">
+
 
       <img
-        src="./angelmarrufoicon.png"
-        class="popup-logo"
+        class="modal-logo"
+        src="angelmarrufoicon.png"
         alt="Audio Solutions"
       >
 
+
       <h2>
+
         Add to Home Screen
+
       </h2>
 
 
-      <div id="installInstructions">
+      <div id="instructions">
 
         <p>
-          Save this business card directly
+          Save this business card
           to your Home Screen.
         </p>
 
@@ -569,16 +844,21 @@
 
 
       <button
-        class="close-button"
+        class="modal-close"
         type="button"
-        onclick="closeHomeScreenModal()"
+        id="closeModal"
       >
+
         Got It
+
       </button>
+
 
     </div>
 
+
   </div>
+
 
 
   <script>
@@ -587,7 +867,7 @@
        CLEAN URL
     ========================== */
 
-    function getCleanURL() {
+    function cleanPageURL() {
 
       return (
         window.location.origin +
@@ -597,50 +877,61 @@
     }
 
 
+
     /* =========================
-       SHARE BUSINESS CARD
+       SHARE FUNCTION
     ========================== */
 
-    async function shareBusinessCard(event) {
+    async function shareCard(event) {
 
       if (event) {
+
         event.preventDefault();
+
       }
 
 
-      const cleanURL =
-        getCleanURL();
+      const pageURL =
+        cleanPageURL();
 
 
-      const shareData = {
+      /*
+        NATIVE SHARE
+        iPhone / Android
+      */
 
-        title:
-          "Ángel Marrufo | Audio Solutions",
-
-        text:
-          "Ángel Marrufo — Audio Solutions & Musical Tech",
-
-        url:
-          cleanURL
-
-      };
-
-
-      /* iPhone / Android native share */
-
-      if (navigator.share) {
+      if (
+        typeof navigator.share ===
+        "function"
+      ) {
 
         try {
 
-          await navigator.share(
-            shareData
-          );
+          await navigator.share({
+
+            title:
+              "Ángel Marrufo | Audio Solutions",
+
+            text:
+              "Ángel Marrufo — Audio Solutions & Musical Tech",
+
+            url:
+              pageURL
+
+          });
+
 
           return;
 
         }
 
+
         catch (error) {
+
+          /*
+            If user simply closes
+            the share menu
+          */
 
           if (
             error.name ===
@@ -651,272 +942,365 @@
 
           }
 
-          console.log(
-            "Native share error:",
-            error
-          );
-
         }
 
       }
 
 
-      /* Copy link fallback */
+
+      /*
+        COPY LINK FALLBACK
+      */
 
       try {
 
-        await navigator.clipboard.writeText(
-          cleanURL
-        );
+        if (
+          navigator.clipboard &&
+          window.isSecureContext
+        ) {
 
-        alert(
-          "Business card link copied!"
-        );
+          await navigator.clipboard.writeText(
+            pageURL
+          );
+
+
+          alert(
+            "Business card link copied!"
+          );
+
+
+          return;
+
+        }
 
       }
 
       catch (error) {
 
-        window.prompt(
-          "Copy this business card link:",
-          cleanURL
-        );
+        console.log(error);
 
       }
+
+
+
+      /*
+        FINAL FALLBACK
+      */
+
+      window.prompt(
+
+        "Copy this business card link:",
+
+        pageURL
+
+      );
 
     }
 
 
+
     /* =========================
-       PWA INSTALL
+       REAL SHARE BUTTON
     ========================== */
 
-    let deferredPrompt = null;
+    document
+      .getElementById(
+        "shareButton"
+      )
+      .addEventListener(
+        "click",
+        shareCard
+      );
+
+
+
+    /* =========================
+       INSTALL APP
+    ========================== */
+
+    let installPrompt = null;
 
 
     window.addEventListener(
+
       "beforeinstallprompt",
+
       function(event) {
 
         event.preventDefault();
 
-        deferredPrompt =
+        installPrompt =
           event;
 
       }
+
     );
 
-
-    window.addEventListener(
-      "appinstalled",
-      function() {
-
-        deferredPrompt =
-          null;
-
-      }
-    );
 
 
     /* =========================
-       ADD TO HOME SCREEN
+       INSTALL BUTTON
     ========================== */
 
-    async function addToHomeScreen() {
+    document
+      .getElementById(
+        "installButton"
+      )
+      .addEventListener(
+
+        "click",
+
+        async function() {
 
 
-      /* Already running as installed app */
+          /*
+            ALREADY INSTALLED
+          */
 
-      if (
-        window.matchMedia(
-          "(display-mode: standalone)"
-        ).matches ||
-        window.navigator.standalone === true
-      ) {
+          if (
 
-        alert(
-          "Audio Solutions is already on your Home Screen."
-        );
+            window.matchMedia(
+              "(display-mode: standalone)"
+            ).matches ||
 
-        return;
+            window.navigator.standalone ===
+            true
 
-      }
+          ) {
 
+            alert(
+              "Audio Solutions is already on your Home Screen."
+            );
 
-      /* Android install prompt */
+            return;
 
-      if (deferredPrompt) {
-
-        deferredPrompt.prompt();
+          }
 
 
-        try {
 
-          await deferredPrompt.userChoice;
+          /*
+            ANDROID / CHROME
+          */
+
+          if (installPrompt) {
+
+            try {
+
+              installPrompt.prompt();
+
+
+              await installPrompt.userChoice;
+
+
+              installPrompt =
+                null;
+
+
+              return;
+
+            }
+
+            catch (error) {
+
+              console.log(
+                error
+              );
+
+            }
+
+          }
+
+
+
+          /*
+            DETECT DEVICE
+          */
+
+          const ua =
+            navigator.userAgent
+              .toLowerCase();
+
+
+          const isIOS =
+
+            /iphone|ipad|ipod/
+              .test(ua);
+
+
+          const isAndroid =
+
+            /android/
+              .test(ua);
+
+
+          const instructions =
+
+            document
+              .getElementById(
+                "instructions"
+              );
+
+
+
+          /*
+            iPHONE / iPAD
+          */
+
+          if (isIOS) {
+
+            instructions.innerHTML = `
+
+              <p>
+                Tap the
+                <strong>Share</strong>
+                button in Safari.
+              </p>
+
+              <p>
+                Scroll down and select
+                <strong>Add to Home Screen</strong>.
+              </p>
+
+              <p>
+                Tap
+                <strong>Add</strong>.
+              </p>
+
+              <p>
+                The Audio Solutions logo
+                will appear on your Home Screen.
+              </p>
+
+            `;
+
+          }
+
+
+
+          /*
+            ANDROID FALLBACK
+          */
+
+          else if (isAndroid) {
+
+            instructions.innerHTML = `
+
+              <p>
+                Tap your browser menu
+                <strong>⋮</strong>.
+              </p>
+
+              <p>
+                Select
+                <strong>Add to Home Screen</strong>
+                or
+                <strong>Install App</strong>.
+              </p>
+
+              <p>
+                The Audio Solutions logo
+                will appear on your Home Screen.
+              </p>
+
+            `;
+
+          }
+
+
+
+          /*
+            COMPUTER / OTHER
+          */
+
+          else {
+
+            instructions.innerHTML = `
+
+              <p>
+                Open this page on your phone
+                to add the Audio Solutions
+                business card to your
+                Home Screen.
+              </p>
+
+            `;
+
+          }
+
+
+
+          document
+            .getElementById(
+              "installModal"
+            )
+            .classList
+            .add(
+              "active"
+            );
 
         }
 
-        catch (error) {
+      );
 
-          console.log(
-            error
-          );
-
-        }
-
-
-        deferredPrompt =
-          null;
-
-        return;
-
-      }
-
-
-      const userAgent =
-        navigator.userAgent.toLowerCase();
-
-
-      const isIOS =
-        /iphone|ipad|ipod/.test(
-          userAgent
-        );
-
-
-      const instructions =
-        document.getElementById(
-          "installInstructions"
-        );
-
-
-      /* iPhone / iPad */
-
-      if (isIOS) {
-
-        instructions.innerHTML = `
-
-          <p>
-            Tap the
-            <strong>Share</strong>
-            button in Safari.
-          </p>
-
-          <p>
-            Scroll down and tap
-            <strong>Add to Home Screen</strong>.
-          </p>
-
-          <p>
-            Then tap
-            <strong>Add</strong>.
-          </p>
-
-          <p>
-            The Audio Solutions logo will appear
-            on your Home Screen.
-          </p>
-
-        `;
-
-      }
-
-
-      /* Other browsers */
-
-      else {
-
-        instructions.innerHTML = `
-
-          <p>
-            Open your browser menu.
-          </p>
-
-          <p>
-            Select
-            <strong>Install App</strong>
-            or
-            <strong>Add to Home Screen</strong>.
-          </p>
-
-          <p>
-            The Audio Solutions logo will appear
-            on your Home Screen.
-          </p>
-
-        `;
-
-      }
-
-
-      document
-        .getElementById(
-          "homeScreenModal"
-        )
-        .classList
-        .add("show");
-
-    }
 
 
     /* =========================
        CLOSE POPUP
     ========================== */
 
-    function closeHomeScreenModal() {
+    document
+      .getElementById(
+        "closeModal"
+      )
+      .addEventListener(
 
-      document
-        .getElementById(
-          "homeScreenModal"
-        )
-        .classList
-        .remove("show");
+        "click",
 
-    }
-
-
-    function closeModalOutside(event) {
-
-      if (
-        event.target.id ===
-        "homeScreenModal"
-      ) {
-
-        closeHomeScreenModal();
-
-      }
-
-    }
-
-
-    /* =========================
-       SERVICE WORKER
-    ========================== */
-
-    if ("serviceWorker" in navigator) {
-
-      window.addEventListener(
-        "load",
         function() {
 
-          navigator.serviceWorker
-            .register("./service-worker.js")
-            .catch(
-              function(error) {
-
-                console.log(
-                  "Service Worker error:",
-                  error
-                );
-
-              }
+          document
+            .getElementById(
+              "installModal"
+            )
+            .classList
+            .remove(
+              "active"
             );
 
         }
+
       );
 
-    }
+
+
+    /* CLOSE WHEN TAPPING OUTSIDE */
+
+    document
+      .getElementById(
+        "installModal"
+      )
+      .addEventListener(
+
+        "click",
+
+        function(event) {
+
+          if (
+            event.target === this
+          ) {
+
+            this.classList.remove(
+              "active"
+            );
+
+          }
+
+        }
+
+      );
 
   </script>
+
 
 </body>
 </html>
